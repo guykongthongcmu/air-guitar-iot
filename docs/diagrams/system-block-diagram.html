@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#fff}</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="720" viewBox="0 0 1640 720" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<style>
+.g{fill:#f6f6f6;stroke:#888;stroke-width:2;stroke-dasharray:8 6}
+.b{fill:#fff;stroke:#222;stroke-width:2.5}
+.t{font-size:24px;font-weight:700;fill:#111;text-anchor:middle}
+.s{font-size:19px;fill:#333;text-anchor:middle}
+.gl{font-size:22px;font-weight:700;fill:#555}
+.l{font-size:18px;fill:#222;text-anchor:middle;font-style:italic}
+.ar{stroke:#222;stroke-width:2.5;fill:none;marker-end:url(#a)}
+</style>
+<rect class="g" x="20" y="40" width="450" height="650" rx="14"/><text class="gl" x="40" y="75">Hardware (strumming hand)</text>
+<rect class="g" x="900" y="40" width="710" height="650" rx="14"/><text class="gl" x="920" y="75">Browser (Vue 3 dashboard)</text>
+<rect class="g" x="500" y="40" width="370" height="650" rx="14"/><text class="gl" x="520" y="75">Network</text>
+
+<rect class="b" x="60" y="130" width="370" height="110" rx="10"/>
+<text class="t" x="245" y="175">US-100 ultrasonic sensor</text><text class="s" x="245" y="206">pulse mode, powered at 3.3 V</text>
+<path class="ar" d="M245,240 L245,330"/><text class="l" x="245" y="292" style="paint-order:stroke;stroke:#fff;stroke-width:8px">Trig D5, Echo D6</text>
+<rect class="b" x="60" y="330" width="370" height="200" rx="10"/>
+<text class="t" x="245" y="372">NodeMCU ESP8266</text>
+<text class="s" x="245" y="408">median of 3 + smoothing</text>
+<text class="s" x="245" y="436">speed over 3 samples</text>
+<text class="s" x="245" y="464">strum at 60 cm/s or more</text>
+<text class="s" x="245" y="492">direction: down or up</text>
+
+<rect class="b" x="540" y="350" width="290" height="160" rx="10"/>
+<text class="t" x="685" y="395">MQTT broker</text><text class="s" x="685" y="428">broker.hivemq.com</text><text class="s" x="685" y="458">prefix airguitar-gk</text><text class="s" x="685" y="486">via iPhone hotspot</text>
+<path class="ar" d="M430,400 L540,400"/>
+<text class="l" x="485" y="385" style="paint-order:stroke;stroke:#fff;stroke-width:8px">Wi-Fi</text>
+
+<path class="ar" d="M830,400 L925,400"/>
+<path class="ar" d="M925,470 L830,470"/>
+<text class="l" x="878" y="378" style="paint-order:stroke;stroke:#fff;stroke-width:8px">strum</text>
+<text class="l" x="878" y="498" style="paint-order:stroke;stroke:#fff;stroke-width:8px">chord, session</text>
+
+<rect class="b" x="925" y="130" width="190" height="100" rx="10"/><text class="t" x="1020" y="172">Webcam</text><text class="s" x="1020" y="204">left hand</text>
+<rect class="b" x="1155" y="130" width="190" height="100" rx="10"/><text class="t" x="1250" y="165">MediaPipe</text><text class="s" x="1250" y="195">21 hand landmarks</text>
+<rect class="b" x="1385" y="130" width="190" height="100" rx="10"/><text class="t" style="font-size:21px" x="1480" y="165">Chord classifier</text><text class="s" x="1480" y="195">KNN, k = 5</text>
+<path class="ar" d="M1115,180 L1155,180"/><path class="ar" d="M1345,180 L1385,180"/>
+
+<rect class="b" x="925" y="340" width="190" height="130" rx="10"/><text class="t" x="1020" y="385">MQTT client</text><text class="s" x="1020" y="418">mqtt.js</text><text class="s" x="1020" y="446">WebSocket (wss)</text>
+<rect class="b" x="1155" y="340" width="190" height="130" rx="10"/><text class="t" x="1250" y="385">Tutor engine</text><text class="s" x="1250" y="418">songs, timing</text><text class="s" x="1250" y="446">chord + timing score</text>
+<rect class="b" x="1385" y="340" width="190" height="130" rx="10"/><text class="t" x="1480" y="385">Sound</text><text class="s" x="1480" y="418">Web Audio</text><text class="s" x="1480" y="446">plucked string</text>
+<path class="ar" d="M1115,405 L1155,405"/><path class="ar" d="M1345,405 L1385,405"/>
+<path class="ar" d="M1480,230 L1480,285 L1250,285 L1250,340"/>
+
+<rect class="b" x="1155" y="540" width="190" height="100" rx="10"/><text class="t" x="1250" y="582">Dashboard</text><text class="s" x="1250" y="612">next chord, score</text>
+<path class="ar" d="M1250,470 L1250,540"/>
+</svg></body></html>

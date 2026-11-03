@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0;background:#fff}</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="1130" viewBox="0 0 920 1130" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<style>
+.b{fill:#fff;stroke:#222;stroke-width:2.5}
+.d{fill:#f6f6f6;stroke:#222;stroke-width:2.5}
+.t{font-size:19px;fill:#111;text-anchor:middle}
+.l{font-size:18px;fill:#222;font-weight:700;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:7px}
+.ar{stroke:#222;stroke-width:2.5;fill:none;marker-end:url(#a)}
+.ln{stroke:#222;stroke-width:2.5;fill:none}
+</style>
+<rect class="b" x="230" y="25" width="340" height="60" rx="30"/><text class="t" x="400" y="62">Every 25 ms: new sample</text>
+<path class="ar" d="M400,85 L400,125"/>
+<rect class="b" x="230" y="125" width="340" height="75" rx="8"/><text class="t" x="400" y="156">Send 10 µs trigger pulse,</text><text class="t" x="400" y="181">time the echo, convert to cm</text>
+<path class="ar" d="M400,200 L400,240"/>
+<path class="d" d="M400,240 L590,295 L400,350 L210,295 Z"/><text class="t" x="400" y="290">Distance between</text><text class="t" x="400" y="314">3 and 60 cm?</text>
+<path class="ar" d="M590,295 L650,295"/><text class="l" x="620" y="283">No</text>
+<rect class="b" x="650" y="265" width="200" height="60" rx="8"/><text class="t" x="750" y="291">Clear the</text><text class="t" x="750" y="313">reading history</text>
+<path class="ln" d="M850,295 L885,295 L885,1085"/>
+<path class="ar" d="M400,350 L400,395"/><text class="l" x="425" y="378">Yes</text>
+<rect class="b" x="230" y="395" width="340" height="75" rx="8"/><text class="t" x="400" y="426">Median of the last 3 readings,</text><text class="t" x="400" y="451">then smoothing (factor 0.5)</text>
+<path class="ar" d="M400,470 L400,510"/>
+<rect class="b" x="230" y="510" width="340" height="75" rx="8"/><text class="t" x="400" y="541">Speed = change in distance over</text><text class="t" x="400" y="566">the last 3 samples / time taken</text>
+<path class="ar" d="M400,585 L400,625"/>
+<path class="d" d="M400,625 L610,690 L400,755 L190,690 Z"/><text class="t" x="400" y="676">Speed at least 60 cm/s</text><text class="t" x="400" y="700">and 150 ms since</text><text class="t" x="400" y="724">the last strum?</text>
+<path class="ln" d="M610,690 L885,690"/><text class="l" x="650" y="678">No</text>
+<path class="ar" d="M400,755 L400,800"/><text class="l" x="425" y="782">Yes</text>
+<path class="d" d="M400,800 L590,850 L400,900 L210,850 Z"/><text class="t" x="400" y="846">Speed negative</text><text class="t" x="400" y="870">(moving closer)?</text>
+<path class="ar" d="M210,850 L170,850"/><text class="l" x="190" y="838">Yes</text>
+<rect class="b" x="40" y="820" width="130" height="60" rx="8"/><text class="t" x="105" y="856">Strum down</text>
+<path class="ar" d="M590,850 L630,850"/><text class="l" x="610" y="838">No</text>
+<rect class="b" x="630" y="820" width="130" height="60" rx="8"/><text class="t" x="695" y="856">Strum up</text>
+<path class="ln" d="M105,880 L105,935 L400,935"/><path class="ln" d="M695,880 L695,935 L400,935"/>
+<path class="ar" d="M400,935 L400,960"/>
+<rect class="b" x="205" y="960" width="390" height="75" rx="8"/><text class="t" x="400" y="991">Publish {dir, speed, t} to MQTT</text><text class="t" x="400" y="1016">topic airguitar-gk/strum</text>
+<path class="ar" d="M400,1035 L400,1062"/>
+<rect class="b" x="285" y="1062" width="230" height="46" rx="23"/><text class="t" x="400" y="1092">Wait for next sample</text>
+<path class="ln" d="M515,1085 L885,1085"/>
+<path class="ln" d="M285,1085 L20,1085 L20,55 L230,55" style="marker-end:url(#a)"/>
+</svg></body></html>
